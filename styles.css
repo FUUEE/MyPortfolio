@@ -1,0 +1,152 @@
+:root{
+  --bg:#ffffff;
+  --card:#f8f8f8;
+  --text:#000000;
+  --muted:#666666;
+  --accent:#000000;
+  --glass: rgba(255,255,255,0.95);
+  --border: #e0e0e0;
+}
+
+[data-theme="dark"]{
+  --bg:#000000;
+  --card:#1a1a1a;
+  --text:#ffffff;
+  --muted:#999999;
+  --accent:#ffffff;
+  --glass: rgba(255,255,255,0.08);
+  --border: #333333;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6;
+  transition:background-color 0.3s ease, color 0.3s ease;
+}
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+
+/* Animations */
+@keyframes fadeInDown {
+  from{opacity:0;transform:translateY(-20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeInUp {
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes slideInRight {
+  from{opacity:0;transform:translateX(-30px)}
+  to{opacity:1;transform:translateX(0)}
+}
+
+@keyframes shimmer {
+  0%{background-position:0% center}
+  100%{background-position:200% center}
+}
+
+@keyframes hover-lift {
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-5px)}
+}
+
+.site-header{
+  background:linear-gradient(180deg,var(--card) 0%,var(--bg) 100%);
+  border-bottom:1px solid var(--border);
+  animation:fadeInDown 0.6s ease-out;
+}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:1.25rem;flex-wrap:wrap}
+.brand h1{margin:0;font-size:1.5rem;font-weight:600;letter-spacing:-0.5px}
+.subtitle{margin:0.25rem 0 0 0;color:var(--muted);font-size:0.95rem;animation:fadeInUp 0.8s ease-out 0.1s both}
+
+.main-nav{position:relative}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.5rem;cursor:pointer;transition:transform 0.2s}
+.nav-toggle:hover{transform:scale(1.1)}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:0.75rem}
+.nav-list li{animation:fadeInDown 0.6s ease-out}
+.nav-list li:nth-child(1){animation-delay:0.1s}
+.nav-list li:nth-child(2){animation-delay:0.2s}
+.nav-list li:nth-child(3){animation-delay:0.3s}
+.nav-list li:nth-child(4){animation-delay:0.4s}
+.nav-list a{color:var(--muted);text-decoration:none;padding:0.5rem 0.75rem;border-radius:6px;transition:all 0.3s ease;position:relative;font-weight:500}
+.nav-list a:hover{color:var(--text);background:var(--card);border-bottom:2px solid var(--accent)}
+
+.header-actions{display:flex;gap:.75rem}
+.btn{
+  background:var(--accent);color:white;padding:0.5rem 1rem;border-radius:6px;border:none;cursor:pointer;
+  text-decoration:none;font-weight:600;transition:all 0.3s ease;font-size:0.95rem;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,0.2)}
+.btn.ghost{background:transparent;border:2px solid var(--accent);color:white}
+.btn.ghost:hover{background:var(--accent);color:white}
+
+.card{
+  background:var(--card);padding:2rem;border-radius:12px;margin:1.5rem 0;
+  border:1px solid var(--border);transition:all 0.3s ease;animation:fadeInUp 0.6s ease-out;
+}
+.card:hover{border-color:var(--accent);box-shadow:0 12px 32px rgba(0,0,0,0.1)}
+.card h2{margin:0 0 1rem 0;font-size:2rem;font-weight:700;letter-spacing:-0.5px}
+.card p{margin:0.75rem 0;color:var(--text)}
+
+.stack-category{
+  margin:1.25rem 0 0.75rem 0;font-size:1rem;font-weight:600;color:var(--text);text-transform:uppercase;
+  letter-spacing:1px;border-bottom:2px solid var(--accent);padding-bottom:0.5rem;
+}
+.stack-category:first-of-type{margin-top:0}
+
+.chips{display:flex;flex-wrap:wrap;gap:0.75rem}
+.chips span{
+  background:var(--accent);color:white;padding:0.5rem 0.875rem;border-radius:20px;font-size:0.9rem;
+  font-weight:500;transition:all 0.3s ease;cursor:default;
+}
+.chips span:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+
+.projects .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.project-card{
+  padding:1.5rem;border-radius:10px;background:var(--card);border:1px solid var(--border);
+  transition:all 0.3s ease;animation:fadeInUp 0.6s ease-out;
+}
+.project-card:nth-child(1){animation-delay:0.2s}
+.project-card:nth-child(2){animation-delay:0.4s}
+.project-card:hover{border-color:var(--accent);transform:translateY(-8px);box-shadow:0 16px 32px rgba(0,0,0,0.15)}
+.project-card h3{margin:0 0 0.5rem 0;font-size:1.25rem;font-weight:700}
+.muted{color:var(--muted);font-size:0.9rem;margin:0.5rem 0;text-transform:uppercase;letter-spacing:0.5px;font-weight:500}
+.project-actions{display:flex;gap:0.75rem;margin-top:1rem}
+
+.contact-list{list-style:none;padding:0;margin:1rem 0}
+.contact-list li{margin:0.75rem 0;font-size:1rem;color: white;}
+.contact-list a{color:white;text-decoration:none;font-weight:600;transition:all 0.3s ease;border-bottom:2px solid transparent}
+.contact-list a:hover{border-bottom-color:var(--accent);opacity:0.8}
+
+.site-footer{
+  padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid var(--border);
+  animation:fadeInUp 0.6s ease-out;
+}
+
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:40;animation:fadeInDown 0.3s ease-out}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{
+  background:var(--card);padding:2rem;border-radius:12px;max-width:720px;width:90%;position:relative;
+  border:1px solid var(--border);animation:fadeInUp 0.3s ease-out;
+}
+.modal-content h3{margin:0 0 1rem 0;font-size:1.5rem;font-weight:700}
+.modal-close{
+  position:absolute;right:1rem;top:1rem;border:0;background:transparent;font-size:1.5rem;cursor:pointer;
+  transition:transform 0.2s;color:var(--text);font-weight:bold;
+}
+.modal-close:hover{transform:scale(1.2) rotate(90deg)}
+
+@media (max-width:800px){
+  .projects .grid{grid-template-columns:1fr}
+  .nav-list{display:none;position:absolute;right:0;top:60px;background:var(--card);padding:1rem;border-radius:8px;border:1px solid var(--border);box-shadow:0 12px 32px rgba(0,0,0,0.15);flex-direction:column}
+  .nav-toggle{display:block}
+  .card{padding:1.5rem}
+  .card h2{font-size:1.5rem}
+}
+
+@media (prefers-color-scheme:dark){
+  :root{--bg:#000000;--card:#1a1a1a;--text:#ffffff}
+}

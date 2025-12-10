@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Julius M. Andres — Portfolio</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<div class="brand">
+					<h1>Julius M. Andres</h1>
+					<p class="subtitle">Full‑Stack Enthusiast — JavaScript · Python · PHP · Java</p>
+				</div>
+
+				<nav class="main-nav" id="mainNav">
+					<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+					<ul class="nav-list">
+						<li><a href="#about">About</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+
+				<div class="header-actions">
+					<a class="btn" href="https://github.com/FUUEE" target="_blank" rel="noopener">GitHub</a>
+					<button id="themeToggle" class="btn ghost" aria-label="Toggle theme">Theme</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="container">
+			<section id="about" class="card about">
+				<h2>About</h2>
+				<p>Hi — I'm Julius. I build web and software solutions using JavaScript, Python (Django), PHP, and Java. I enjoy designing clean front-ends, building reliable backends, and integrating databases like MySQL, SQLite and Firebase.</p>
+			</section>
+
+			<section id="skills" class="card skills">
+				<h2>Tech Stack</h2>
+				<h3 class="stack-category">Languages</h3>
+				<div class="chips">
+					<span>JavaScript</span>
+					<span>Python</span>
+					<span>Java</span>
+					<span>PHP</span>
+					<span>HTML</span>
+					<span>CSS</span>
+				</div>
+
+				<h3 class="stack-category">Frameworks & Libraries</h3>
+				<div class="chips">
+					<span>Django</span>
+					<span>Node.js</span>
+					<span>React</span>
+				</div>
+
+				<h3 class="stack-category">Databases</h3>
+				<div class="chips">
+					<span>MySQL</span>
+					<span>SQLite</span>
+					<span>Firebase</span>
+				</div>
+
+				<h3 class="stack-category">Tools & Platforms</h3>
+				<div class="chips">
+					<span>Git / GitHub</span>
+					<span>VSCode</span>
+					<span>XAMPP / Apache</span>
+					<span>Android Studio</span>
+					<span>Unity</span>
+					<span>Figma</span>
+				</div>
+			</section>
+
+			<section id="projects" class="card projects">
+				<h2>Recent Projects</h2>
+				<div class="grid">
+					<article class="project-card">
+						<h3>Tahanan ng Pagmamahal</h3>
+						<p class="muted">Orphanage Management System</p>
+						<p class="project-type">Web-based Capstone (2025)</p>
+						<p>Features: resident management, donations, events, reporting, and user roles for staff and admins.</p>
+						<div class="project-actions">
+							<button class="btn" data-project="tahanan">Details</button>
+							<a class="btn ghost" href="https://tahananngpagmamahal.capstone-two.com" target="_blank" rel="noopener">VIEW</a>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<h3>PIMS</h3>
+						<p class="muted">Inventory Management System</p>
+						<p class="project-type">Python Django (Final Project)</p>
+						<p>Inventory tracking, stock alerts, user authentication (Firebase optional), and CSV export/import.</p>
+						<div class="project-actions">
+							<button class="btn" data-project="pims">Details</button>
+							<a class="btn ghost" href="https://github.com/FUUEE/Pandayan_Inventory_Management_System"_blank" rel="noopener">This project is not deployed, But here is the Repo instead</a>
+						</div>
+					</article>
+
+				</div>
+			</section>
+
+			<section id="contact" class="card contact">
+				<h2>Contact</h2>
+				<p>If you'd like samples or to discuss opportunities, reach out:</p>
+				<ul class="contact-list">
+					<li><strong>Email:</strong> <a href="mailto:andresjulius.aj@gmail.com">andresjulius.aj@gmail.com</a></li>
+					<li><strong>Phone:</strong> <a href="tel:+639605142054">+63 960-514-2054</a></li>
+					<li><strong>GitHub:</strong> <a href="https://github.com/FUUEE" target="_blank" rel="noopener">github.com/FUUEE</a></li>
+				</ul>
+			</section>
+
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<small>© Julius M. Andres — Built with HTML, CSS & JavaScript</small>
+			</div>
+		</footer>
+
+		<!-- Project detail modal -->
+		<div id="modal" class="modal" aria-hidden="true">
+			<div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+				<button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+				<h3 id="modalTitle">Project</h3>
+				<div id="modalBody"></div>
+			</div>
+		</div>
+
+		<script src="script.js" defer></script>
+	</body>
+</html>
