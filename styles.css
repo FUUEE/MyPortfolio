@@ -91,6 +91,15 @@ body{
 .card h2{margin:0 0 1rem 0;font-size:2rem;font-weight:700;letter-spacing:-0.5px}
 .card p{margin:0.75rem 0;color:var(--text)}
 
+/* About section */
+.about-name{
+  margin:0.25rem 0 0.5rem 0;
+  font-size:1.25rem;
+  font-weight:700;
+  color:var(--text);
+  letter-spacing:-0.3px;
+}
+
 .stack-category{
   margin:1.25rem 0 0.75rem 0;font-size:1rem;font-weight:600;color:var(--text);text-transform:uppercase;
   letter-spacing:1px;border-bottom:2px solid var(--accent);padding-bottom:0.5rem;
